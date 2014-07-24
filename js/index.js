@@ -2,20 +2,13 @@
 $(document).ready(function(){
 
     readData();
-<<<<<<< HEAD
     var topic=[]; 
 
     //read Json file 
     function readData(){
-=======
-    var topic=[];
-
-    function readData(){
-
->>>>>>> f980cf778909121c157cea753fc050e71c9255da
-    	$.ajax({
+        $.ajax({
           type: 'GET',    
-          url: "./data.json",         
+          url: "./QA1.json",         
           contentType : "application/json; charset=utf-8",
           dataType : "json",
           crossDomain: true,         
@@ -23,24 +16,22 @@ $(document).ready(function(){
                 $.each(result,function(i){
                     
                     topic.push({
-                        question: result[i].question, 
-                        ans:  result[i].ans
+                        question:result[i].question, 
+                        ans:result[i].ans
                     });
                 })
 
                 $.each(topic,function(i){
-                    console.log(topic[i].question);
-                    console.log(topic[i].ans);
+                     console.log(topic[i].question);
                 })
-                
+               
           },
-          error:function(jqXHR, textStatus, errorThrown){
+           error:function(jqXHR, textStatus, errorThrown){
             alert(errorThrown);
           }
         });
     }
 
-<<<<<<< HEAD
     $('#submit_bt').on('click',function(){
         var input=$("#input_text").val();
         
@@ -87,7 +78,7 @@ $(document).ready(function(){
                
           },
           error:function(jqXHR, textStatus, errorThrown){
-            // alert(errorThrown);
+            alert(errorThrown);
           }
         });
 
@@ -97,7 +88,5 @@ $(document).ready(function(){
 
     
 
-=======
->>>>>>> f980cf778909121c157cea753fc050e71c9255da
 });
 
