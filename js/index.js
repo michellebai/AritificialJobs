@@ -2,10 +2,17 @@
 $(document).ready(function(){
 
     readData();
+<<<<<<< HEAD
     var topic=[]; 
 
     //read Json file 
     function readData(){
+=======
+    var topic=[];
+
+    function readData(){
+
+>>>>>>> f980cf778909121c157cea753fc050e71c9255da
     	$.ajax({
           type: 'GET',    
           url: "./data.json",         
@@ -33,6 +40,7 @@ $(document).ready(function(){
         });
     }
 
+<<<<<<< HEAD
     $('#submit_bt').on('click',function(){
         var input=$("#input_text").val();
         
@@ -89,5 +97,7 @@ $(document).ready(function(){
 
     
 
+=======
+>>>>>>> f980cf778909121c157cea753fc050e71c9255da
 });
 
