@@ -1,17 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Hello World</title>
-    </head>
-    <body>
-        <h1>Hello Jobs</h1>
+<html>
+<head>
+<meta charset="utf-8">
 
-        <input id='input_text' type='text' />
-        <button id='submit_bt' type="submit">submit</button>
-        <script src="./js/jquery-1.11.0.min.js"></script>
-       	<script src="./js/index.js"></script>
+<title>Hello Jobs! I got questions for you</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="./js/jquery-1.11.0.min.js"></script>
+<script src="./js/index.js"></script>
+<script src="./js/typed.js" type="text/javascript"></script>
+<script>
+	$(function(){
 
+		/*--- typewriter style  ---*/
 
-    </body>
+		$(".steve-speak").typed({
+			strings: ["I AM READY FOR YOUR QUESTION!"],
+			typeSpeed: 30,
+			backDelay: 500,
+			loop: false,
+			// defaults to false for infinite loop
+			loopCount: false,
+			callback: function(){ foo(); }
+		});
+
+		function foo(){ console.log("Callback"); }
+
+		/*---// typewriter style  ---*/
+
+		$(".tab-container").on("click",function(){
+			console.log("CLICKED");
+			$(".help-container").toggleClass("open");
+			// var width = $(".help-container").width();
+			$(".tab-container").toggleClass("open");
+		})		
+
+	});
+</script>
+<style>
+	/* code for animated blinking cursor */
+	#typed-cursor{
+		opacity: 1;
+		font-weight: 100;
+		-webkit-animation: blink 0.7s infinite;
+		-moz-animation: blink 0.7s infinite;
+		-ms-animation: blink 0.7s infinite;
+		-o-animation: blink 0.7s infinite;
+		animation: blink 0.7s infinite;
+	}
+	@-keyframes blink{
+		0% { opacity:1; }
+		50% { opacity:0; }
+		100% { opacity:1; }
+	}
+	@-webkit-keyframes blink{
+		0% { opacity:1; }
+		50% { opacity:0; }
+		100% { opacity:1; }
+	}
+	@-moz-keyframes blink{
+		0% { opacity:1; }
+		50% { opacity:0; }
+		100% { opacity:1; }
+	}
+	@-ms-keyframes blink{
+		0% { opacity:1; }
+		50% { opacity:0; }
+		100% { opacity:1; }
+	}
+	@-o-keyframes blink{
+		0% { opacity:1; }
+		50% { opacity:0; }
+		100% { opacity:1; }
+	}
+</style> 
+</head>
+<body>
+	<div class="content-container">
+		<div class="steve-container">
+			<div class="dots"></div>
+			<div class="steve-head"></div>
+			<div class="steve-speak">
+				<!-- I AM READY FOR YOUR QUESTION! -->
+			</div>
+		</div>
+		<div class="question-container">
+			<div class="question-sign"></div>
+			<textarea class="question-textarea">
+			</textarea>
+			<button class="submit">送出</button>
+		</div>
+
+	</div>
+	<div class="tab-container">
+		Help
+	</div>
+	<div class="help-container">
+		<h3>翻譯蒟蒻</h3>
+		<ul>
+			<li class="apple"></li>
+			<li class="lemon"></li>
+			<li class="strawberry"></li>
+		</ul>
+	</div>
+</body>
 </html>

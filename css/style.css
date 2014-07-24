@@ -1,0 +1,187 @@
+/*
+* 2014/07/24 by Angela
+*/
+
+/* ------ reset ------ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+li {
+  list-style-type: none;
+}
+
+
+
+body{
+	margin:0;
+	padding:0;
+	background:#F7F7EF;
+}
+.content-container{
+	width:100%;
+	margin:0;
+	margin-top:25px;
+	padding:0;
+	padding-bottom:60px;
+}
+.steve-container{
+	position:relative;
+	width:420px;
+	margin:0 auto;
+}
+.steve-container .dots{
+	position:absolute;
+	width:410px;
+	height:500px;
+	background:url("../images/dots.png");
+	z-index:-20;
+	margin:0 auto;
+}
+.steve-container .steve-head{
+	width:391px;
+	height:544px;
+	padding:0 14px;
+	background:url("../images/Steve-Jobs.png") no-repeat;
+}
+.steve-container .steve-speak{
+	width:300px;
+	margin:0 auto;
+	padding:0;
+	/*padding:20px 20px;*/
+/*	background:#000000;
+	color:#ffffff;*/
+}
+.question-container{
+	width:900px;
+	margin:0 auto;
+}
+.question-container .question-textarea{
+	width:770px;
+	margin-left:100px;
+	padding:15px;
+	border:none;
+}
+.question-container .submit{
+	float:right;
+	width:100px;
+	height:20px;
+	margin-top:20px;
+	padding:20px;
+	border:none;
+	background:#00b0c3;
+	color:#ffffff;
+	/*font-size:1.2em;*/
+}
+.question-container .question-sign{
+	width:244px;
+	height:104px;
+	background:url("../images/got-a-question-title.png") no-repeat;
+}
+
+.tab-container{
+	position:fixed;
+	right:0;
+	top:20%;
+	width:40px;
+	height:10px;
+	padding:20px;
+	color:#00b0c3;
+	background:#ffffff;
+	border:1px solid #00b0c3;
+	border-left:20px solid #00b0c3;
+	border-right:none;
+}
+.tab-container:hover{
+	width:60px;
+}
+.tab-container.open{
+	right:600px;
+}
+
+.help-container{
+	display:none;
+	width:600px;
+	height:100%;
+	position:fixed;
+	right:0;
+	top:0;
+	background:#ffc900;
+}
+.help-container.open{
+	display:inline;
+}
+.help-container ul{
+	margin:0;
+	padding:0;
+}
+.help-container ul li{
+	padding:20px;
+}
+.help-container .apple{
+	width:55px;
+	height:65px;
+	background:url("../images/apple.png") no-repeat;
+}
+.help-container .lemon{
+	width:62px;
+	height:57px;
+	background:url("../images/lemon.png") no-repeat;
+}
+.help-container .strawberry{
+	width:51px;
+	height:67px;
+	background:url("../images/strawberry.png") no-repeat;
+}
